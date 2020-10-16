@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'partials/_navbar_black.html' %}
+<main class="main">
+    <section class="container ">
+        <div class="row ">
+            <div class="col-md-10 offset-1 ">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            {% for f in first %}
+                            <h1 class="text-center">{{f.title}}</h1>
+                            <h3 class="col-6 offset-3 text-center">{{f.sub_text}}</h3>
+                            {% endfor %}
+                        </div>
+                        {% if next %}
+                        {% for n in next %}
+                        <div class="carousel-item">
+                            <h1 class="text-center">{{n.title}}</h1>
+                            <h3 class="col-6 offset-3 text-center">{{n.sub_text}}</h3>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="carousel-item">
+                            <h1 class="text-center">DEFAULT TITLE</h1>
+                            <h3 class=" col-6 offset-3 text-center">DEFAULT SUBTEXT
+                            </h3>
+                        </div>
+                        {% endif %}
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="container pt-4 ">
+        <div class="row">
+            <div class="col-3 offset-2">
+                <button type="button" class="btn btn-primary">Запит ціни</button>
+                <button type="button" class="btn btn-primary">Деталі</button>
+            </div>
+        </div>
+    </section>
+    <section class="container pt-5 pb-5 ">
+
+        <div class=" col-lg-12 ml-auto pt-5">
+            <div class="row d-flex justify-content-between text-center">
+                <div class="column col-lg-3">
+                    <h3 class="shorttext">Відстеження джерел поширення медіа атаки</h3>
+
+                    <p>робота з найефективнішими інструментами пошуку та аналізу інформації</p>
+                </div>
+
+                <div class="column col-lg-3 ">
+                    <h3 class="shorttext">Фіксація та аналіз цифрових доказів</h3>
+
+                    <p>робота з найефективнішими інструментами пошуку та аналізу інформації</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+{% endblock %}

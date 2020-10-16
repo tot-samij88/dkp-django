@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'partials/_navbar_black.html' %}
+<main class="main pt-5 pb-5 img-circule ">
+    <section class="container pt-5 pb-5 ">
+        <div class="row pt-5 pb-5">
+            <div class="col-md-8 offset-2 text-center ">
+                <h1 class="font-yellow">Cyber Media Track
+                    консолідація компетенцій</h1>
+                <h4 class="font-yellow">інноваційний центр синергії експертів з BIG DATA та CYBER аналізу
+                    медіапростору,
+                    результат якого визначає стратегію розвитку бренду та потенційні ризики</h4>
+            </div>
+        </div>
+    </section>
+    <section class="container pt-5 pb-5">
+        <div class="row pt-5 pb-5">
+            <div class="col-md-10 offset-1 d-flex justify-content-center pt-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators ">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="https://static-cse.canva.com/blob/187518/Apple.48433d0a.png"
+                                        target="_blank">
+                                        <img src="https://static-cse.canva.com/blob/187518/Apple.48433d0a.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/187524/58428e7da6515b1e0ad75ab5.7c23a881.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/187530/Google.b4580926.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/187531/Nasa.f24a2eca.jpg"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        {% if our_teamate %}
+                        {% for our in our_teamate %}
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-2">
+                                    <a href="{{our.img1}}" target="_blank">
+                                        <img src="{{our.link1.url}}" class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="{{our.img2}}" target="_blank">
+                                        <img src="{{our.link2.url}}" class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="{{our.img3}}" target="_blank">
+                                        <img src="{{our.link3.url}}" class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="{{our.img4}}" target="_blank">
+                                        <img src="{{our.link4.url}}" class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/232565/Cola.a0cb9a97.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/232566/ibmpos_blue.eb22c9a4.jpg"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/232568/visa.af4f6abe.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a href="#">
+                                        <img src="https://static-cse.canva.com/blob/232568/visa.af4f6abe.png"
+                                            class="d-block w-50" alt="">
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+{% endblock %}

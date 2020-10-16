@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+{% include 'partials/_navbar_white.html' %}
+<main class="bg-white  pt-5 pb-5 img-white1 ">
+    <section class="container pt-5 pb-5 img-white">
+        <div class="row pt-5 pb-5">
+            <div class="col-md-8 offset-2 text-center ">
+                {% for ab in about %}
+                <h1 class="font-black">{{ab.title}}</h1>
+                <h4 class="font-black">{{ab.sub_text}}</h4>
+                {% endfor %}
+            </div>
+        </div>
+
+</main>
+{% endblock %}
